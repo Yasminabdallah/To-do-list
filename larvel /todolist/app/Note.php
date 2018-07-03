@@ -10,7 +10,7 @@ class Note extends Eloquent
 
     protected $collection = 'lists';
     protected $fillable = [
-        'description', 'starttime', 'endtime',
+        'title','description', 'starttime', 'endtime',
     ];
     
 }

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Note;
 
-class ListController extends Controller
+class NoteController extends Controller
 {
     
 }
