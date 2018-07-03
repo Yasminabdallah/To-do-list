@@ -2,15 +2,15 @@
 
 namespace App;
 
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+//use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Note extends Eloquent
+class Note extends Moloquent
 {
     protected $connection = 'mongodb';
 
     protected $collection = 'lists';
     protected $fillable = [
-        'title','description', 'starttime', 'endtime',
+        'title','description', 'startdate', 'enddate',
     ];
     
 }
