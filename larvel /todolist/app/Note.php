@@ -1,10 +1,12 @@
 <?php
 
 namespace App;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-//use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Note extends Moloquent
+
+
+class Note extends Eloquent
 {
     protected $connection = 'mongodb';
 

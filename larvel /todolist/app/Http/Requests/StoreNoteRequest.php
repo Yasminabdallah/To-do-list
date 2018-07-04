@@ -27,8 +27,8 @@ class StoreNoteRequest extends FormRequest
         return [
             'title' => 'required|min:3',
             'description' => 'required|min:11',
-            'startdate'=>'required|date',
-            'enddate' => 'required|date|after:'.Carbon::now(),
+            'startdate'=>'date',
+            'enddate' => 'date|after:'.Carbon::now(),
         
         ];
     }

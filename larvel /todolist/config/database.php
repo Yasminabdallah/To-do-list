@@ -67,7 +67,7 @@ return [
 
             'password' => env('DB_PASSWORD'),
 
-            'options'  => []
+            'options'  => ['database' => 'lists']
 
         ],
 
