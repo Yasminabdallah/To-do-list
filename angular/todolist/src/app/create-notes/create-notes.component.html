@@ -34,8 +34,8 @@
       <div class="form-group">
           <label> End Date</label>
     
-          <input type="date" name="enddate"  [(ngModel)]="enddate"   class="form-control" >
-          <span  style="color:red" *ngIf="createForm.submitted && enddate<startdate ">
+          <input type="date" name="expiredate"  [(ngModel)]="expiredate"   class="form-control" >
+          <span  style="color:red" *ngIf="createForm.submitted && expiredate<startdate ">
               This Field is false
             </span>
           

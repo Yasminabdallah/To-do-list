@@ -21,7 +21,7 @@ export class ServiceService  {
   }
 
   postData(url:string,data:object): Observable<any>{
-    return this.http.post(path+url,JSON.stringify(data),{ headers });
+    return this.http.post(path+url,data);
     }
 
 
