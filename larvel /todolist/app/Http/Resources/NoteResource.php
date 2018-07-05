@@ -21,6 +21,7 @@ class NoteResource extends JsonResource
             'title' => $this->title,
             'date'=>$this->startdate,
             'expiredate'=>$this->enddate,
+            'id'=>$this->id,
             
         
         ];

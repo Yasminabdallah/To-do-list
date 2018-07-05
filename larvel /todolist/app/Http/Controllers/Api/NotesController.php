@@ -15,19 +15,33 @@ class NotesController extends Controller
         return NoteResource::collection($notes);
  
      }
-     public function store (StoreNoteRequest $request){
-       $note=Note::create($request->all());
+     public function store (Request $request){
        
-       return new  NoteResource($note);
+     //$note=Note::create($request->all());
+     $note = Note::create([
+        'title'        => request('title'),
+        'description' => request('description'),
+        'startdate' =>request('startdate'),
+        'enddatedate' =>request('enddate'),
+    ]);
+       
+       return response()->json(['response' => 'success']);
  
  
      }
-     public function destroy(Note $note)
+
+     public function show($id){
+        $note=Note::find($id);
+        return new NoteResource($note); 
+        
+     }
+     public function destroy( $id)
 
      {
- 
-         $note->delete();
-   
+         $note=Note::find($id)->delete();
+         
+         
+         return response()->json(['response' => 'success']);
  
      }
 }
