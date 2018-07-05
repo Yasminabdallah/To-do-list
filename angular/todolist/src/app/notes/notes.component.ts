@@ -39,7 +39,7 @@ export class NotesComponent implements OnInit {
      
       res => {
         console.log(res)
-        if (res == "success") {
+        if (res.response == "success") {
           console.log("deleted");
           this.getNotes()
           this.alerts.setMessage('Successfully Deleted!', 'success');
