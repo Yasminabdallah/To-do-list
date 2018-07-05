@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+  <h1 align="center"> Notes</h1>
+  <br/>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-success" routerLink="/notes/create" routerLinkActive="active"> Create New Note </button>
+    </div>
+    <div class="col-4">
+    </div>
+   
+  <br>
+  <br>
+  <table class="table table-striped ">
+    <thead class="thead-dark">
+      <tr>
+        <th> Title</th>
+        <th> start </th>
+        <th> End</th>
+
+        <th> Action </th>
+      </tr>
+    </thead>
+    <tr *ngFor="let note of response" >
+        
+      <td> {{note.title}}</td>
+      <td> {{note.date }}</td>
+      <td> {{note.expiredate }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="delete('/notes/'+note.id)"> Delete </button>
+        <button class="btn btn-success" routerLink="notes/{{note.id}}" routerLinkActive="active"> View </button>
+      </td>
+
+    </tr>
+  </table>
