@@ -28,7 +28,7 @@
       <td> {{note.expiredate }}</td>
       <td>
         <button class="btn btn-danger" (click)="delete('/notes/'+note.id)"> Delete </button>
-        <button class="btn btn-success" routerLink="notes/{{note.id}}" routerLinkActive="active"> View </button>
+        <button class="btn btn-success" routerLink="/notes/{{note.id}}" routerLinkActive="active"> View </button>
       </td>
 
     </tr>

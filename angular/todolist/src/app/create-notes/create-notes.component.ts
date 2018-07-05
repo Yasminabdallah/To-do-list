@@ -10,10 +10,11 @@ import { AlertsService } from 'angular-alert-module';
 })
 export class CreateNotesComponent implements OnInit {
   dataForm: object;
-  title:string;
-  description:string;
-  startdate:string;
-  enddate:string;
+  title:any;
+  description:any;
+  startdate:any;
+  enddate:any;
+ 
   constructor(  private api: ServiceService,
     private router: Router,
     private alerts: AlertsService) {this.dataForm = {}}
@@ -22,10 +23,12 @@ export class CreateNotesComponent implements OnInit {
   }
   create(form :NgForm):void{
     if (form.valid) {
-      this.dataForm = { title: this.title, description: this.description, startdate: this.startdate ,enddate: this.enddate };
+      this.dataForm = {title: this.title,description: this.description, startdate: this.startdate,enddate: this.enddate };
+       console.log(this.dataForm);
       this.api.postData('/notes', this.dataForm).subscribe(
         res => {
-          if (res == "success") {
+          
+          if (res.response == "success") {
            this.router.navigate(['/notes/']);
             this.alerts.setMessage('Successfully Created!', 'success');
           }
