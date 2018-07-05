@@ -15,9 +15,9 @@ class NotesController extends Controller
         return NoteResource::collection($notes);
  
      }
-     public function store (Request $request){
+     public function store (StoreNoteRequest $request){
        
-     //$note=Note::create($request->all());
+
      $note = Note::create([
         'title'        => $request->title,
         'description' => $request->description,
