@@ -19,13 +19,13 @@ class NotesController extends Controller
        
      //$note=Note::create($request->all());
      $note = Note::create([
-        'title'        => request('title'),
-        'description' => request('description'),
-        'startdate' =>request('startdate'),
-        'enddatedate' =>request('enddate'),
+        'title'        => $request->title,
+        'description' => $request->description,
+        'startdate' =>$request->startdate,
+        'enddate' =>$request->enddate,
     ]);
        
-       return response()->json(['response' => 'success']);
+       return response()->json(['response' => 'success','req'=>$request]);
  
  
      }

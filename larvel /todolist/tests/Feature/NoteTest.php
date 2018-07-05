@@ -20,5 +20,6 @@ class NoteTest extends TestCase
         $response = $this->get('/api/notes');
  
         $response->assertStatus(200);
+        
     }
 }
